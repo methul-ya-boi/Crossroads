@@ -1,0 +1,19 @@
+using UnityEngine;
+using System.Collections; 
+
+public class ignore : MonoBehaviour
+{
+
+    public GameObject playercollision;
+    public GameObject bulletcollision;
+    // Start is called before the first frame update
+    void Start()
+    {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Physics2D.IgnoreCollision(playercollision.GetComponent<Collider2D>(), bulletcollision.GetComponent<Collider2D>());
+    }
+}
